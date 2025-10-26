@@ -68,6 +68,6 @@ My objective is to determine the most effective predictive model to support the 
 ---
 **Overall Conclusion**
 
-* The **best-performing model** was the **cleaned Linear Regression (70:30 split)**, outperforming all others in R², MAE, MSE, and RMSE metrics.
-* The study demonstrated that **voice features (especially jitter and shimmer)** can be promising non-invasive indicators of PD severity.
-* **Data preprocessing**, particularly **outlier removal** and **feature selection**, played a crucial role in improving predictive performance.
+* The best-performing model was the Linear Regression (70:30 split) in cleaned dataset, outperforming all others in R², MAE, MSE, and RMSE metrics.
+* The study demonstrated that voice features (especially jitter and shimmer) can be promising non-invasive indicators of PD severity.
+* Data preprocessing, particularly outlier removal and feature selection, played a crucial role in improving predictive performance.
