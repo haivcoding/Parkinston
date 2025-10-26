@@ -24,7 +24,8 @@ In this assignment, I explore voice sample data from early-stage Parkinson’s d
    * Model rebuilding after each transformation
 
 My objective is to determine the most effective predictive model to support the development of PD diagnostic techniques using voice sample analysis.
-<img width="1023" height="538" alt="image" src="https://github.com/user-attachments/assets/65e8607d-d0a2-4416-8135-6b47e7cf4aa6" />
+
+<img src="https://github.com/user-attachments/assets/65e8607d-d0a2-4416-8135-6b47e7cf4aa6" alt="image" style="width:60%; height:auto;" />
 
 # Key findings
 
@@ -36,6 +37,9 @@ My objective is to determine the most effective predictive model to support the 
   * *Motor UPDRS:* Jitter(rap) (negative effect) and Shimmer(apq3) (positive effect).
   * *Total UPDRS:* Jitter(rap) (negative effect) and Jitter(ddp) (positive effect).
 * Explained variance: **~21.7% (Motor)** and **~25% (Total)** — both outperforming the baseline model.
+
+<img src="https://github.com/user-attachments/assets/93393f7a-977d-4c2c-9220-f5caa794b8d8" alt="image" style="width:60%; height:auto;" />
+
 ---
 2. **Data Splitting & Outlier Removal**
 
