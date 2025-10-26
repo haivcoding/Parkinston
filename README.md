@@ -1,2 +1,1 @@
-# Parkinston
-Diagnosing Parkinson’s Disease using voice sample data analysis
+# Diagnosing Parkinson’s Disease using voice sample data analysis
