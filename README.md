@@ -29,8 +29,64 @@ My objective is to determine the most effective predictive model to support the 
 # Key findings
 1. **Baseline Linear Regression**
 
-Developed predictive models for Motor and Total UPDRS scores using a 60:40 train-test split.
-Significant features:
-    * Motor UPDRS: Jitter(rap) (negative effect) and Shimmer(apq3) (positive effect).
-    * Total UPDRS: Jitter(rap) (negative effect) and Jitter(ddp) (positive effect).
-Explained variance: ~21.7% (Motor) and ~25% (Total) — both outperforming the baseline model.
+* Developed predictive models for Motor and Total UPDRS scores using a 60:40 train-test split.
+* **Significant features:**
+
+  * *Motor UPDRS:* Jitter(rap) (negative effect) and Shimmer(apq3) (positive effect).
+  * *Total UPDRS:* Jitter(rap) (negative effect) and Jitter(ddp) (positive effect).
+* Explained variance: **~21.7% (Motor)** and **~25% (Total)** — both outperforming the baseline model.
+
+2. **Data Splitting & Outlier Removal**
+
+* Used the **Isolation Forest algorithm** to remove 294 outliers from 5,875 observations.
+* After cleaning, model performance improved notably:
+
+  * **Motor UPDRS:** R² = 0.2464 (70:30 split).
+  * **Total UPDRS:** R² = 0.2683 (70:30 split).
+* **K-Fold Validation:** k=5 yielded slightly better results than k=10, confirming model stability.
+* Key takeaway: **Data cleaning and proper train-test splits significantly enhanced model accuracy.**
+
+3. **Log-Transformation & Collinearity Analysis**
+
+* Applied **log transformations** to positively skewed features (e.g., jitter and shimmer) to normalise distributions.
+* Conducted **collinearity analysis** using heatmaps — identified high correlations among jitter and shimmer metrics.
+* Retained only one representative variable (*log_jitter(%)*), reducing redundancy and improving model stability.
+* Refined models achieved:
+
+  * **Motor UPDRS:** R² ≈ 11%.
+  * **Total UPDRS:** R² ≈ 14%.
+* Highlighted the **importance of feature engineering** and handling multicollinearity in predictive healthcare models.
+
+---
+
+#### 4. **Standardisation & Gaussian Transformation**
+
+* Applied **StandardScaler** and **Yeo-Johnson Gaussian transformation** to normalise distributions.
+* Resulting models explained **~22% (Motor)** and **~25% (Total)** of variance.
+* However, this step provided **less improvement** compared to the outlier-cleaned linear regression model.
+
+---
+
+### 🧩 **Overall Conclusion**
+
+* The **best-performing model** was the **cleaned Linear Regression (70:30 split)**, outperforming all others in R², MAE, MSE, and RMSE metrics.
+* The study demonstrated that **voice features (especially jitter and shimmer)** can be promising non-invasive indicators of PD severity.
+* **Data preprocessing**, particularly **outlier removal** and **feature selection**, played a crucial role in improving predictive performance.
+
+---
+
+### ⚙️ **Discussion & Limitations**
+
+* **Feature engineering** and preprocessing significantly impact model performance.
+* Voice-based prediction is **non-invasive and promising** but limited by:
+
+  * Linear regression’s simplicity (may not capture non-linear voice–disease patterns).
+  * Residual collinearity among features.
+  * Moderate explanatory power (R² < 0.3), leaving variance unexplained.
+  * Limited generalisability beyond the dataset used.
+* Future work should explore **non-linear models (e.g., Random Forest, SVM, or Neural Networks)** for better predictive accuracy.
+
+---
+
+Would you like me to format this into a **portfolio-ready summary section** (e.g., a one-page highlight or slide summary) with headings such as *Objective, Methods, Key Results, Insights,* and *Future Work*?
+
