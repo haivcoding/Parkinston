@@ -1,4 +1,6 @@
 # Diagnosing Parkinson’s Disease using voice sample data analysis
+## Acknowledgements
+This project was developed in collaboration with Chi Doan, Trang Doan, and Kamal at Charles Darwin University (CDU).
 # Context
 Parkinson’s Disease (PD) is a progressive movement disorder of the nervous system, according to the U.S. National Institute of Neurological Disorders and Stroke. Common symptoms include tremors, rigidity, bradykinesia, and postural instability. Notable individuals affected include Muhammad Ali, George H.W. Bush, Michael J. Fox, Ozzy Osbourne, and Pope John Paul II.
 
