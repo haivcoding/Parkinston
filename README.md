@@ -1,6 +1,7 @@
 # Diagnosing Parkinson’s Disease using voice sample data analysis
 # Context
 Parkinson’s Disease (PD) is a progressive movement disorder of the nervous system, according to the U.S. National Institute of Neurological Disorders and Stroke. Common symptoms include tremors, rigidity, bradykinesia, and postural instability. Notable individuals affected include Muhammad Ali, George H.W. Bush, Michael J. Fox, Ozzy Osbourne, and Pope John Paul II.
+
 There is no cure or specific diagnostic test for PD; existing methods like blood tests and brain scans are invasive and stressful. Increasing research focuses on non-invasive diagnosis through speech analysis, as people with PD often experience dysphonia—reduced loudness, breathiness, roughness, and vocal tremors—detectable via voice frequency patterns.
 # Objective
 By examining these voice samples, I aim to explore the potential of speech data as a diagnostic tool. In this project, I focus on predicting the motor and total UPDRS scores, which reflect the severity and progression of Parkinson’s disease in patients.
@@ -26,4 +27,10 @@ My objective is to determine the most effective predictive model to support the 
 <img width="1023" height="538" alt="image" src="https://github.com/user-attachments/assets/65e8607d-d0a2-4416-8135-6b47e7cf4aa6" />
 
 # Key findings
+1. **Baseline Linear Regression**
 
+Developed predictive models for Motor and Total UPDRS scores using a 60:40 train-test split.
+Significant features:
+    * Motor UPDRS: Jitter(rap) (negative effect) and Shimmer(apq3) (positive effect).
+    * Total UPDRS: Jitter(rap) (negative effect) and Jitter(ddp) (positive effect).
+Explained variance: ~21.7% (Motor) and ~25% (Total) — both outperforming the baseline model.
